@@ -1,0 +1,529 @@
+<h2 class="sr-only">2024 AHA/AACVPR 핵심 변경사항 반영 심장재활 진료 전 스크리닝 서식</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+.wrap{padding:1.5rem 0;font-family:var(--font-sans);}
+.fh{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem 1.5rem;margin-bottom:1rem;}
+.fh-title{font-size:16px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px;}
+.fh-sub{font-size:11px;color:var(--color-text-secondary);line-height:1.6;}
+.ssa-map{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:1rem;}
+.ssa-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:7px 10px;background:var(--color-background-primary);}
+.ssa-tag{font-size:9px;font-weight:500;letter-spacing:0.03em;margin-bottom:2px;}
+.ssa-name{font-size:11px;color:var(--color-text-primary);line-height:1.4;}
+.tag-ssa{color:#3C3489;} .tag-new{color:#085041;} .tag-upd{color:#633806;}
+.badge{display:inline-block;font-size:10px;padding:1px 7px;border-radius:999px;font-weight:500;margin-left:6px;vertical-align:middle;}
+.b-req{background:var(--color-background-danger);color:var(--color-text-danger);}
+.b-new{background:#E1F5EE;color:#085041;}
+.b-upd{background:#FAEEDA;color:#633806);}
+.b-upd2{background:#FAEEDA;color:#633806;}
+.b-info{background:var(--color-background-info);color:var(--color-text-info);}
+.sec{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);background:var(--color-background-primary);margin-bottom:.9rem;overflow:hidden;}
+.sh{padding:9px 1.25rem;border-bottom:0.5px solid var(--color-border-tertiary);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.snum{width:20px;height:20px;border-radius:50%;font-size:10px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.n1{background:#EEEDFE;color:#3C3489;} .n2{background:#E1F5EE;color:#085041;}
+.n3{background:#FAEEDA;color:#633806;} .n4{background:#FAECE7;color:#712B13;}
+.n5{background:#E6F1FB;color:#0C447C;} .n6{background:#EAF3DE;color:#27500A;}
+.n7{background:#FCEBEB;color:#791F1F;} .n8{background:#FBEAF0;color:#72243E;}
+.n9{background:#F1EFE8;color:#444441;}
+.stitle{font-size:12px;font-weight:500;color:var(--color-text-primary);}
+.ssa-ref{font-size:10px;color:var(--color-text-secondary);margin-left:auto;}
+.sb{padding:.9rem 1.25rem;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:9px;}
+.fr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:9px;}
+.fr1{margin-bottom:9px;}
+.fl{font-size:10px;color:var(--color-text-secondary);margin-bottom:2px;}
+.fi{width:100%;height:30px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-secondary);padding:0 9px;font-size:12px;color:var(--color-text-primary);font-family:var(--font-sans);}
+.fta{width:100%;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-secondary);padding:5px 9px;font-size:12px;color:var(--color-text-primary);font-family:var(--font-sans);resize:none;height:52px;line-height:1.5;}
+.fs{width:100%;height:30px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-secondary);padding:0 9px;font-size:12px;color:var(--color-text-primary);font-family:var(--font-sans);}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.cg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;}
+.ci{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-primary);padding:3px 0;}
+.ci input{width:13px;height:13px;flex-shrink:0;accent-color:#534AB7;}
+.div{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:8px 0;}
+.sl{font-size:10px;font-weight:500;color:var(--color-text-secondary);margin:7px 0 4px;text-transform:uppercase;letter-spacing:0.04em;}
+.alr{display:flex;align-items:flex-start;gap:7px;background:var(--color-background-danger);border:0.5px solid var(--color-border-danger);border-radius:var(--border-radius-md);padding:7px 11px;margin-bottom:8px;}
+.alr i{color:var(--color-text-danger);font-size:15px;margin-top:1px;flex-shrink:0;}
+.alr p{font-size:11px;color:var(--color-text-danger);line-height:1.5;}
+.alg{display:flex;align-items:flex-start;gap:7px;background:#E1F5EE;border:0.5px solid #5DCAA5;border-radius:var(--border-radius-md);padding:7px 11px;margin-bottom:8px;}
+.alg i{color:#085041;font-size:15px;margin-top:1px;flex-shrink:0;}
+.alg p{font-size:11px;color:#085041;line-height:1.5;}
+.aly{display:flex;align-items:flex-start;gap:7px;background:var(--color-background-warning);border:0.5px solid var(--color-border-warning);border-radius:var(--border-radius-md);padding:7px 11px;margin-bottom:8px;}
+.aly i{color:var(--color-text-warning);font-size:15px;margin-top:1px;flex-shrink:0;}
+.aly p{font-size:11px;color:var(--color-text-warning);line-height:1.5;}
+.rc{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0;}
+.rci{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:7px 10px;}
+.rcl{font-size:9px;color:var(--color-text-secondary);margin-bottom:3px;}
+.fwu{display:flex;align-items:center;gap:5px;}
+.fwu .fi{flex:1;}
+.fwu span{font-size:10px;color:var(--color-text-secondary);white-space:nowrap;}
+.goal-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:6px 0;}
+.goal-box{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:6px 8px;}
+.goal-lbl{font-size:9px;color:var(--color-text-secondary);margin-bottom:2px;}
+.goal-val{font-size:11px;font-weight:500;color:var(--color-text-primary);}
+.prog-bar{height:4px;background:var(--color-border-tertiary);border-radius:2px;margin-top:4px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:2px;}
+.footer{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.5rem;margin-top:.5rem;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.footer p{font-size:10px;color:var(--color-text-secondary);}
+.btn{background:var(--color-text-primary);color:var(--color-background-primary);border:none;border-radius:var(--border-radius-md);padding:7px 16px;font-size:12px;font-weight:500;cursor:pointer;font-family:var(--font-sans);white-space:nowrap;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.infobox{background:var(--color-background-secondary);border-left:3px solid #534AB7;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:7px 10px;margin-bottom:8px;}
+.infobox p{font-size:11px;color:var(--color-text-primary);line-height:1.5;}
+.tgt-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;padding:5px 0;border-bottom:0.5px solid var(--color-border-tertiary);}
+.tgt-row:last-child{border-bottom:none;}
+.tgt-name{font-size:11px;color:var(--color-text-secondary);}
+.tgt-val{font-size:11px;font-weight:500;color:var(--color-text-primary);}
+.tgt-status select{border:none;background:transparent;font-size:11px;color:var(--color-text-primary);font-family:var(--font-sans);}
+.ex-table{width:100%;font-size:11px;border-collapse:collapse;}
+.ex-table th{background:var(--color-background-secondary);font-weight:500;font-size:10px;color:var(--color-text-secondary);padding:5px 8px;text-align:left;border:0.5px solid var(--color-border-tertiary);}
+.ex-table td{padding:5px 8px;border:0.5px solid var(--color-border-tertiary);color:var(--color-text-primary);vertical-align:top;}
+.ex-table input,.ex-table select{width:100%;border:none;background:transparent;font-size:11px;color:var(--color-text-primary);font-family:var(--font-sans);}
+.bc-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin:6px 0;}
+.bc-item{background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:6px 8px;text-align:center;}
+.bc-label{font-size:9px;color:var(--color-text-secondary);margin-bottom:2px;}
+.bc-input{width:100%;border:none;background:transparent;font-size:12px;font-weight:500;color:var(--color-text-primary);text-align:center;font-family:var(--font-sans);}
+.pq-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:6px 0;}
+.pq-box{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 10px;}
+.pq-icon{font-size:18px;margin-bottom:3px;}
+.pq-lbl{font-size:9px;color:var(--color-text-secondary);margin-bottom:3px;}
+.pq-sel{width:100%;border:none;background:transparent;font-size:11px;color:var(--color-text-primary);font-family:var(--font-sans);}
+</style>
+
+<div class="wrap">
+
+<!-- 헤더 -->
+<div class="fh">
+  <div class="fh-title"><i class="ti ti-heart-rate-monitor" aria-hidden="true" style="font-size:17px;vertical-align:-3px;margin-right:6px;"></i>소아청소년 선천성 심장질환 · 심장재활 진료 전 스크리닝 서식<span class="badge b-info">2024 개정판</span></div>
+  <div class="fh-sub">근거: AHA/AACVPR 2024 Scientific Statement (Circulation. 2024;150:e328–e347) Table 3 핵심 변경사항 전면 반영 · 소아청소년과 CHD 특화</div>
+</div>
+
+<!-- SSA 구성요소 매핑 맵 -->
+<div class="ssa-map">
+  <div class="ssa-card"><div class="ssa-tag tag-ssa">SSA 필수</div><div class="ssa-name">① 개별화 치료계획<br>환자 평가</div></div>
+  <div class="ssa-card"><div class="ssa-tag tag-ssa">SSA 필수</div><div class="ssa-name">② 영양 상담<br><span style="color:#085041;font-size:9px;">AHA/ACC 라이프스타일</span></div></div>
+  <div class="ssa-card"><div class="ssa-tag tag-upd">2024 확장</div><div class="ssa-name">③ 체중·<b style="color:#633806;">체성분</b> 관리<br><span style="font-size:9px;color:#633806;">NEW: 체성분 추가</span></div></div>
+  <div class="ssa-card"><div class="ssa-tag tag-ssa">SSA 필수</div><div class="ssa-name">④ 심혈관 위험인자<br>혈압·이상지혈증·당뇨·금연</div></div>
+  <div class="ssa-card"><div class="ssa-tag tag-ssa">SSA 필수</div><div class="ssa-name">⑤ 심리사회적 관리<br>(평가→관리로 확장)</div></div>
+  <div class="ssa-card"><div class="ssa-tag tag-upd">2024 분리</div><div class="ssa-name">⑥ 유산소 운동<br>⑦ <b style="color:#633806;">근력 운동</b> 별도화</div></div>
+  <div class="ssa-card"><div class="ssa-tag tag-ssa">SSA 필수</div><div class="ssa-name">⑧ 신체활동 상담</div></div>
+  <div class="ssa-card"><div class="ssa-tag tag-new">2024 신설</div><div class="ssa-name">⑨ <b style="color:#085041;">프로그램 질</b> 관리<br><span style="font-size:9px;color:#085041;">시스템·프로그램·환자 수준</span></div></div>
+</div>
+
+<!-- 섹션 1: 기본 인적사항 -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n1">1</div>
+    <span class="stitle">기본 인적사항 및 의뢰 정보</span>
+    <span class="ssa-ref">SSA: 개별화 치료계획</span>
+  </div>
+  <div class="sb">
+    <div class="fr3">
+      <div><div class="fl">환자 성명</div><input class="fi" type="text" placeholder="홍길동"></div>
+      <div><div class="fl">생년월일</div><input class="fi" type="text" placeholder="YYYY-MM-DD"></div>
+      <div><div class="fl">나이 / 성별</div><input class="fi" type="text" placeholder="예: 14세 / 남"></div>
+    </div>
+    <div class="fr3">
+      <div><div class="fl">등록번호</div><input class="fi" type="text" placeholder="병원 등록번호"></div>
+      <div><div class="fl">의뢰 의사 / 과</div><input class="fi" type="text" placeholder="소아심장과 ○○○"></div>
+      <div><div class="fl">스크리닝 시행일</div><input class="fi" type="text" placeholder="YYYY-MM-DD"></div>
+    </div>
+    <div class="fr">
+      <div><div class="fl">보호자 성명 / 관계</div><input class="fi" type="text" placeholder="예: 김○○ / 모(母)"></div>
+      <div><div class="fl">연락처</div><input class="fi" type="text" placeholder="010-XXXX-XXXX"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 2: 환자 평가 (SSA 개별화 치료계획) -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n2">2</div>
+    <span class="stitle">환자 평가 — 심장 진단 · 수술 이력</span>
+    <span class="badge b-req">SSA 필수</span>
+    <span class="ssa-ref">2007→2024: Patient assessment (동일)</span>
+  </div>
+  <div class="sb">
+    <div class="alr"><i class="ti ti-alert-triangle" aria-hidden="true"></i><p>CR 적격 진단 확인 필수. 선천성 심장질환 수술·시술 후, 심장이식, 심부전(EF≤35%, NYHA II–IV), 안정형 협심증 등 SSA 정의 진단 해당 여부를 반드시 체크하세요.</p></div>
+    <div class="sl">주 심장 진단 (복수 선택)</div>
+    <div class="cg">
+      <label class="ci"><input type="checkbox"> 단심실 / Fontan 완성</label>
+      <label class="ci"><input type="checkbox"> 활로사징(TOF) 교정 후</label>
+      <label class="ci"><input type="checkbox"> 대혈관전위(TGA) 교정 후</label>
+      <label class="ci"><input type="checkbox"> VSD / ASD 교정 후</label>
+      <label class="ci"><input type="checkbox"> 대동맥축착 교정 후</label>
+      <label class="ci"><input type="checkbox"> 폐동맥판막 질환/중재 후</label>
+      <label class="ci"><input type="checkbox"> 확장성·비후성 심근병증</label>
+      <label class="ci"><input type="checkbox"> 심장이식 후</label>
+      <label class="ci"><input type="checkbox"> 안정형 심부전 (EF ≤35%)</label>
+      <label class="ci"><input type="checkbox"> 부정맥 / ICD·페이스메이커</label>
+      <label class="ci"><input type="checkbox"> 폐동맥고혈압 동반</label>
+      <label class="ci"><input type="checkbox"> 기타 CHD</label>
+    </div>
+    <div class="fr" style="margin-top:8px;">
+      <div><div class="fl">마지막 수술·시술일 / 누적 횟수</div><input class="fi" type="text" placeholder="예: 2023-05 / 총 3회"></div>
+      <div><div class="fl">최근 심초음파 EF (%) · 날짜</div><input class="fi" type="text" placeholder="예: 55% / 2024-03"></div>
+    </div>
+    <div class="fr">
+      <div><div class="fl">최근 12-lead ECG 소견</div><input class="fi" type="text" placeholder="예: 동율동, RBBB"></div>
+      <div><div class="fl">잔여 병변 / 기기</div><input class="fi" type="text" placeholder="예: PM 삽입, 잔류 VSD(소)"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 3: 영양 상담 (AHA/ACC Lifestyle Guideline) -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n3">3</div>
+    <span class="stitle">영양 상담 평가</span>
+    <span class="badge b-req">SSA 필수</span>
+    <span class="ssa-ref">근거: AHA/ACC Lifestyle Management Guideline</span>
+  </div>
+  <div class="sb">
+    <div class="alg"><i class="ti ti-info-circle" aria-hidden="true"></i><p>식사 빈도 설문(FFQ) 또는 24시간 회상법으로 평가. DASH·지중해식·식물성 식단 패턴 준수 여부 확인. 프로그램 시작·종료 시점 모두 평가하여 변화 추적.</p></div>
+    <div class="fr">
+      <div><div class="fl">식이 평가 도구</div>
+        <select class="fs"><option>-- 선택 --</option><option>FFQ (식품 빈도 설문)</option><option>24시간 회상법</option><option>3일 식이 기록</option><option>간이 식이 점수</option></select>
+      </div>
+      <div><div class="fl">식이 점수 / 평가 날짜</div><input class="fi" type="text" placeholder="예: AHEI 52점 / 2024-05"></div>
+    </div>
+    <div class="sl">주요 식습관 패턴 (해당 항목 체크)</div>
+    <div class="cg">
+      <label class="ci"><input type="checkbox"> 채소·과일 섭취 부족</label>
+      <label class="ci"><input type="checkbox"> 나트륨 과다 (짠 음식 선호)</label>
+      <label class="ci"><input type="checkbox"> 포화지방·가공육 과다</label>
+      <label class="ci"><input type="checkbox"> 당류·가당 음료 과다</label>
+      <label class="ci"><input type="checkbox"> 결식 / 불규칙 식사</label>
+      <label class="ci"><input type="checkbox"> 폭식 / 야식 습관</label>
+      <label class="ci"><input type="checkbox"> 전곡류·콩류 섭취 부족</label>
+      <label class="ci"><input type="checkbox"> 수분 섭취 부족</label>
+    </div>
+    <div class="fr" style="margin-top:6px;">
+      <div><div class="fl">주 식사 준비자 / 외식 빈도</div><input class="fi" type="text" placeholder="예: 어머니 / 주 2회 외식"></div>
+      <div><div class="fl">영양사 상담 이력 / 의뢰 필요</div>
+        <select class="fs"><option>-- 선택 --</option><option>과거 상담 있음 (충분)</option><option>과거 상담 있음 (추가 필요)</option><option>미경험 → 의뢰 필요</option></select>
+      </div>
+    </div>
+    <div class="sl">영양 관련 SMART 목표 (초기 설정)</div>
+    <div class="fr1"><input class="fi" type="text" placeholder="예: 4주 내 나트륨 하루 2,000mg 이하로 줄이기, 채소 매 끼니 1접시 포함"></div>
+  </div>
+</div>
+
+<!-- 섹션 4: 체중·체성분 관리 (2024 확장: 체성분 추가) -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n4">4</div>
+    <span class="stitle">체중 관리 및 체성분 평가</span>
+    <span class="badge b-upd2">2024 확장</span>
+    <span class="ssa-ref">변경: 체중만→체성분(근육량·체지방) 추가 평가</span>
+  </div>
+  <div class="sb">
+    <div class="aly"><i class="ti ti-bulb" aria-hidden="true"></i><p>2024 업데이트 핵심: 체중·BMI만으로는 체지방·제지방 감별 불가. 정상 체중 비만(Normal-weight obesity) 고위험군 식별을 위해 체성분 평가 추가 필수.</p></div>
+    <div class="bc-grid">
+      <div class="bc-item"><div class="bc-label">신장 (cm)</div><input class="bc-input" type="text" placeholder="—"></div>
+      <div class="bc-item"><div class="bc-label">체중 (kg)</div><input class="bc-input" type="text" placeholder="—"></div>
+      <div class="bc-item"><div class="bc-label">BMI / 백분위</div><input class="bc-input" type="text" placeholder="— / —th"></div>
+      <div class="bc-item"><div class="bc-label">허리둘레 (cm)</div><input class="bc-input" type="text" placeholder="—"></div>
+    </div>
+    <div class="sl">체성분 평가 방법 선택 (2024 신규 권고)</div>
+    <table class="ex-table">
+      <tr><th>평가 방법</th><th>시행 여부</th><th>결과 / 날짜</th><th>원격 적합성</th></tr>
+      <tr>
+        <td>허리둘레 / 허리-엉덩이 비율<br><span style="font-size:9px;color:#888;">저비용·고실행성, 원격 가능</span></td>
+        <td><select><option>시행</option><option>미시행</option></select></td>
+        <td><input type="text" placeholder="예: W/H = 0.82"></td>
+        <td style="text-align:center;">✓ 가능</td>
+      </tr>
+      <tr>
+        <td>생체전기저항(BIA)<br><span style="font-size:9px;color:#888;">중등 정확도, 체수분 영향</span></td>
+        <td><select><option>미시행</option><option>시행</option></select></td>
+        <td><input type="text" placeholder="체지방율 / 근육량"></td>
+        <td style="text-align:center;">조건부</td>
+      </tr>
+      <tr>
+        <td>DXA (이중에너지 X선)<br><span style="font-size:9px;color:#888;">고정밀, 원격 불가</span></td>
+        <td><select><option>미시행</option><option>시행</option></select></td>
+        <td><input type="text" placeholder="날짜 및 결과"></td>
+        <td style="text-align:center;">✗ 불가</td>
+      </tr>
+    </table>
+    <div class="fr" style="margin-top:8px;">
+      <div>
+        <div class="fl">체성분 목표 (1차: 체지방 감소 / 근육량 증가)</div>
+        <select class="fs"><option>-- 선택 --</option><option>체지방 감소 우선</option><option>근육량 증가(근감소 대응) 우선</option><option>체중 유지 + 체성분 개선</option><option>체중 감량 + 체성분 개선</option></select>
+      </div>
+      <div>
+        <div class="fl">비만 치료적 개입 필요 여부</div>
+        <select class="fs"><option>-- 선택 --</option><option>식이·운동 요법 우선</option><option>약물 치료 고려 (의뢰)</option><option>수술적 치료 고려 (의뢰)</option><option>해당 없음</option></select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 5: 심혈관 위험인자 관리 -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n5">5</div>
+    <span class="stitle">심혈관 위험인자 관리 (혈압·이상지혈증·당뇨·금연)</span>
+    <span class="badge b-req">SSA 필수</span>
+    <span class="ssa-ref">Multi-Society ASCVD / BP / Cholesterol / ADA / ATS 가이드라인</span>
+  </div>
+  <div class="sb">
+    <!-- 혈압 -->
+    <div class="sl">혈압 관리 (Multi-Society BP Guideline 2017)</div>
+    <div class="tgt-row"><span class="tgt-name">혈압 목표</span><span class="tgt-val">SBP &lt;130 / DBP &lt;80 mmHg</span><div class="tgt-status"><select><option>목표 달성</option><option>미달성</option><option>측정 불가</option></select></div></div>
+    <div class="fr3" style="margin-top:6px;">
+      <div><div class="fl">우측 혈압 (mmHg)</div><input class="fi" type="text" placeholder="SBP / DBP"></div>
+      <div><div class="fl">좌측 혈압 (mmHg)</div><input class="fi" type="text" placeholder="SBP / DBP"></div>
+      <div><div class="fl">측정 시 심박수 (bpm)</div><input class="fi" type="text" placeholder="예: 72"></div>
+    </div>
+    <div class="fr">
+      <div><div class="fl">항고혈압제 복용 / 순응도</div><select class="fs"><option>-- 선택 --</option><option>복용 중·순응 양호</option><option>복용 중·불규칙</option><option>미복용</option></select></div>
+      <div><div class="fl">혈압 상승 영향 약물 사용</div><select class="fs"><option>-- 선택 --</option><option>없음</option><option>NSAID</option><option>스테로이드</option><option>기타</option></select></div>
+    </div>
+    <div class="div"></div>
+    <!-- 이상지혈증 -->
+    <div class="sl">이상지혈증 관리 (Multi-Society Cholesterol Guideline 2018)</div>
+    <div class="tgt-row"><span class="tgt-name">LDL-C 목표</span><span class="tgt-val">죽상경화 CVD: &lt;70 mg/dL / 초고위험: &lt;55 mg/dL</span><div class="tgt-status"><select><option>달성</option><option>미달성</option><option>미확인</option></select></div></div>
+    <div class="fr3" style="margin-top:6px;">
+      <div><div class="fl">LDL-C (mg/dL) / 날짜</div><input class="fi" type="text" placeholder="예: 88 / 2024-03"></div>
+      <div><div class="fl">HDL-C / TG (mg/dL)</div><input class="fi" type="text" placeholder="예: 48 / 142"></div>
+      <div><div class="fl">스타틴 복용 / 순응도</div><select class="fs"><option>-- 선택 --</option><option>복용·양호</option><option>복용·불규칙</option><option>미복용</option></select></div>
+    </div>
+    <div class="div"></div>
+    <!-- 당뇨 -->
+    <div class="sl">당뇨 관리 (ADA Guideline 2023)</div>
+    <div class="tgt-row"><span class="tgt-name">HbA1c 목표</span><span class="tgt-val">대부분 환자 &lt;7%</span><div class="tgt-status"><select><option>달성</option><option>미달성</option><option>해당 없음</option></select></div></div>
+    <div class="fr3" style="margin-top:6px;">
+      <div><div class="fl">HbA1c (%) / 날짜</div><input class="fi" type="text" placeholder="예: 6.8% / 2024-04"></div>
+      <div><div class="fl">공복혈당 (mg/dL)</div><input class="fi" type="text" placeholder="예: 102"></div>
+      <div><div class="fl">당뇨 치료제 / 순응도</div><select class="fs"><option>-- 선택 --</option><option>복용·양호</option><option>복용·불규칙</option><option>미복용·해당없음</option></select></div>
+    </div>
+    <div class="div"></div>
+    <!-- 금연 (ATS 가이드라인) -->
+    <div class="sl">금연 개입 (ATS Tobacco Cessation Guideline 2020)</div>
+    <div class="cg" style="margin-bottom:6px;">
+      <label class="ci"><input type="checkbox"> 현재 흡연 (본인)</label>
+      <label class="ci"><input type="checkbox"> 과거 흡연 (금연일: ______)</label>
+      <label class="ci"><input type="checkbox"> 전자담배 / 베이핑</label>
+      <label class="ci"><input type="checkbox"> 간접흡연 노출 (가정 내)</label>
+    </div>
+    <div class="fr">
+      <div><div class="fl">금연 준비도</div><select class="fs"><option>-- 선택 --</option><option>비해당 (비흡연)</option><option>변화 고려 없음</option><option>변화 고려 중</option><option>준비 완료 / 금연 시도 중</option></select></div>
+      <div><div class="fl">금연 개입 방법</div><select class="fs"><option>-- 선택 --</option><option>비해당</option><option>간단 상담 제공</option><option>금연 프로그램 의뢰</option><option>약물 치료 병행</option></select></div>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 6: 심리사회적 관리 (2024: 평가→관리로 확장) -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n6">6</div>
+    <span class="stitle">심리사회적 관리</span>
+    <span class="badge b-upd2">2024 확장</span>
+    <span class="ssa-ref">변경: 심리사회적 '평가'→'관리' (개입·목표 포함)</span>
+  </div>
+  <div class="sb">
+    <div class="alg"><i class="ti ti-info-circle" aria-hidden="true"></i><p>2024 업데이트: 단순 '선별'에서 적극적 '관리'로 확장. 원격·가상 CR 시 기술 접근성 및 원격 정신건강 안전 고려사항 추가 평가 필수.</p></div>
+    <div class="fr">
+      <div><div class="fl">우울 선별 (PHQ-A 등) 점수</div><input class="fi" type="text" placeholder="점수 또는 미시행"></div>
+      <div><div class="fl">불안 선별 (GAD-7 등) 점수</div><input class="fi" type="text" placeholder="점수 또는 미시행"></div>
+    </div>
+    <div class="sl">심리사회적 평가 항목</div>
+    <div class="cg">
+      <label class="ci"><input type="checkbox"> 우울 증상</label>
+      <label class="ci"><input type="checkbox"> 불안 증상</label>
+      <label class="ci"><input type="checkbox"> 지각된 스트레스 과다</label>
+      <label class="ci"><input type="checkbox"> 사회적 고립 / 외로움</label>
+      <label class="ci"><input type="checkbox"> 학교 적응 어려움</label>
+      <label class="ci"><input type="checkbox"> 수면 장애</label>
+      <label class="ci"><input type="checkbox"> 분노 조절 어려움</label>
+      <label class="ci"><input type="checkbox"> 질환 관련 부모 불안</label>
+      <label class="ci"><input type="checkbox"> 물질 사용 패턴 (CR 방해)</label>
+      <label class="ci"><input type="checkbox"> 외부 정신건강 치료 중</label>
+    </div>
+    <div class="fr" style="margin-top:8px;">
+      <div><div class="fl">심리사회적 위험 수준</div><select class="fs"><option>-- 선택 --</option><option>저위험 (CR 내 관리 가능)</option><option>중등도 (심리사회 개입 계획 필요)</option><option>고위험 (전문 의뢰 필요)</option></select></div>
+      <div><div class="fl">원격 CR 시 정신건강 안전 우려</div><select class="fs"><option>-- 선택 --</option><option>없음</option><option>기술 접근 제한</option><option>자해·자살 위험 스크리닝 필요</option><option>보호자 동반 필수</option></select></div>
+    </div>
+    <div class="sl">사회적 지지 환경</div>
+    <div class="fr">
+      <div><div class="fl">주 사회적 지지자</div><input class="fi" type="text" placeholder="예: 양부모, 학교 상담 교사"></div>
+      <div><div class="fl">지역사회 자원 활용 여부</div><select class="fs"><option>-- 선택 --</option><option>활용 중</option><option>미활용 (정보 제공 필요)</option><option>접근 어려움</option></select></div>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 7: 유산소 운동 훈련 (2024: 근력 훈련과 분리) -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n7">7</div>
+    <span class="stitle">유산소 운동 훈련 평가 및 처방 기반 정보</span>
+    <span class="badge b-req">SSA 필수</span>
+    <span class="ssa-ref">변경: 근력 훈련과 완전 분리 (2024)</span>
+  </div>
+  <div class="sb">
+    <div class="alr"><i class="ti ti-alert-triangle" aria-hidden="true"></i><p>절대 금기: 비보상성 심부전·조절 안 된 부정맥·중증 폐동맥고혈압·혈역학 불안정 잔여 병변. 해당 시 즉시 주치의 알림 및 운동 처방 보류.</p></div>
+    <div class="sl">기능 평가</div>
+    <div class="fr">
+      <div><div class="fl">최근 운동부하검사 (날짜·결과)</div><input class="fi" type="text" placeholder="예: peak VO₂ 22 mL/kg/min (2024-04)"></div>
+      <div><div class="fl">6분 보행 검사 (6MWT) 거리</div><div class="fwu"><input class="fi" type="text" placeholder="미시행 또는 거리"><span>m</span></div></div>
+    </div>
+    <div class="sl">운동 처방 기반 정보 (FITT-VP)</div>
+    <table class="ex-table">
+      <tr><th>요소</th><th>권고 범위 (2024)</th><th>환자 초기 설정</th><th>비고</th></tr>
+      <tr><td>빈도 (F)</td><td>3–5일/주</td><td><input type="text" placeholder="예: 3일/주"></td><td>비CR 날 가정 운동 권고</td></tr>
+      <tr><td>강도 (I) — 중등도</td><td>HRR 40–59% / RPE 12–13</td><td><input type="text" placeholder="목표 심박수 범위"></td><td>연령예측 최대심박수 사용 금지</td></tr>
+      <tr><td>강도 (I) — 고강도</td><td>HRR 60–89% / RPE 14–17</td><td><input type="text" placeholder="HIIT 적합 여부"></td><td>HIIT: 체성분 개선에 효과적</td></tr>
+      <tr><td>시간 (T)</td><td>20–60분 (준비·정리 포함)</td><td><input type="text" placeholder="예: 초기 30분"></td><td>1–5분/세션 점진 증가</td></tr>
+      <tr><td>형태 (T)</td><td>트레드밀, 사이클, 로잉 등</td><td><input type="text" placeholder="선호 운동 종목"></td><td>상지 운동 포함 여부</td></tr>
+    </table>
+    <div class="sl">유산소 운동 목표 (AACVPR 성과 지표)</div>
+    <div class="goal-row">
+      <div class="goal-box"><div class="goal-lbl">peak VO₂ 목표</div><div class="goal-val">≥15% 향상</div><div class="prog-bar"><div class="prog-fill" style="width:0%;background:#534AB7;"></div></div></div>
+      <div class="goal-box"><div class="goal-lbl">MET 향상 (3→마지막 세션)</div><div class="goal-val">≥40% 향상</div><div class="prog-bar"><div class="prog-fill" style="width:0%;background:#1D9E75;"></div></div></div>
+      <div class="goal-box"><div class="goal-lbl">6MWT 거리 목표</div><div class="goal-val">≥10% 향상</div><div class="prog-bar"><div class="prog-fill" style="width:0%;background:#D85A30;"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 8: 근력 훈련 (2024 별도 독립 구성요소) -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n8">8</div>
+    <span class="stitle">근력 훈련 평가 및 처방 기반 정보</span>
+    <span class="badge b-new">2024 독립 신설</span>
+    <span class="ssa-ref">변경: 운동 훈련에서 근력 훈련 별도 분리 — 증거 기반 확대 반영</span>
+  </div>
+  <div class="sb">
+    <div class="alg"><i class="ti ti-info-circle" aria-hidden="true"></i><p>2024 핵심 변경: 근력 훈련이 유산소 훈련과 독립된 핵심 구성요소로 격상. CHD 환자의 근감소증·허약(frailty)·낙상 위험을 독립적으로 평가·개입. 저기능 환자에서 유산소 운동 내성 확보를 위한 선행 요소.</p></div>
+    <div class="sl">근력·기능 평가</div>
+    <div class="fr">
+      <div><div class="fl">Timed Up and Go (TUG)</div><div class="fwu"><input class="fi" type="text" placeholder="미시행 또는 소요 시간"><span>초 (≥12초 낙상 위험)</span></div></div>
+      <div><div class="fl">30초 의자 일어서기 (횟수)</div><input class="fi" type="text" placeholder="미시행 또는 횟수 (연령 백분위 비교)"></div>
+    </div>
+    <div class="fr">
+      <div><div class="fl">4단계 균형 검사</div><select class="fs"><option>-- 선택 --</option><option>4단계 모두 통과 (10초)</option><option>3단계까지 통과</option><option>2단계까지 통과</option><option>1단계도 불완전</option></select></div>
+      <div><div class="fl">Berg 균형 척도 (0–56점)</div><input class="fi" type="text" placeholder="예: 48점 (41–56: 독립 보행)"></div>
+    </div>
+    <div class="fr">
+      <div><div class="fl">근감소증(sarcopenia) 의심</div><select class="fs"><option>-- 선택 --</option><option>없음</option><option>의심 (평가 필요)</option><option>확인됨</option></select></div>
+      <div><div class="fl">허약(frailty) 선별 결과</div><select class="fs"><option>-- 선택 --</option><option>강건 (Robust)</option><option>전허약 (Pre-frail)</option><option>허약 (Frail)</option></select></div>
+    </div>
+    <div class="sl">근력 훈련 처방 기반 정보 (2024 권고)</div>
+    <table class="ex-table">
+      <tr><th>요소</th><th>권고 (2024)</th><th>환자 초기 설정</th></tr>
+      <tr><td>빈도</td><td>2–3일/주 (비연속일)</td><td><input type="text" placeholder="예: 주 2회 (월·목)"></td></tr>
+      <tr><td>강도</td><td>1RM의 40–60% / RPE 11–13</td><td><input type="text" placeholder="초기 저항 또는 1RM 기록"></td></tr>
+      <tr><td>세트·반복</td><td>1–3세트 × 10–15회</td><td><input type="text" placeholder="예: 1세트 × 12회 (초기)"></td></tr>
+      <tr><td>운동 종목 수</td><td>8–10가지 (주요 근육군)</td><td><input type="text" placeholder="예: 레그프레스, 체스트프레스 등"></td></tr>
+      <tr><td>운동 장비</td><td>기구·프리웨이트·밴드·체중</td><td><select><option>-- 선택 --</option><option>저항 기구 (센터)</option><option>탄성 밴드 (가정)</option><option>체중 운동</option><option>혼합</option></select></td></tr>
+    </table>
+    <div class="sl">근력 훈련 목표</div>
+    <div class="cg">
+      <label class="ci"><input type="checkbox"> 허약 예방·치료</label>
+      <label class="ci"><input type="checkbox"> 낙상 위험 감소</label>
+      <label class="ci"><input type="checkbox"> 근감소증 역전</label>
+      <label class="ci"><input type="checkbox"> 유산소 운동 내성 확보</label>
+    </div>
+  </div>
+</div>
+
+<!-- 섹션 9: 신체활동 상담 -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n9">9</div>
+    <span class="stitle">신체활동 상담</span>
+    <span class="badge b-req">SSA 필수</span>
+    <span class="ssa-ref">SSA: 의사 처방 운동 (Physical Activity Counseling)</span>
+  </div>
+  <div class="sb">
+    <div class="tgt-row"><span class="tgt-name">주간 신체활동 목표</span><span class="tgt-val">중등도 ≥150분/주 또는 고강도 75분/주</span><div class="tgt-status"><select><option>달성</option><option>미달성</option><option>평가 필요</option></select></div></div>
+    <div class="fr" style="margin-top:8px;">
+      <div><div class="fl">현재 주간 중등도 신체활동 (분)</div><input class="fi" type="text" placeholder="예: 약 60분/주"></div>
+      <div><div class="fl">일평균 보행 수 (만보계 / 앱)</div><input class="fi" type="text" placeholder="예: 약 4,200보/일"></div>
+    </div>
+    <div class="fr">
+      <div><div class="fl">보행 계측기 / 웨어러블 사용</div><select class="fs"><option>-- 선택 --</option><option>스마트워치 사용 중</option><option>스마트폰 만보기</option><option>별도 페도미터</option><option>미사용</option></select></div>
+      <div><div class="fl">좌식 행동 감소 목표</div><input class="fi" type="text" placeholder="예: 1시간마다 5분 보행 삽입"></div>
+    </div>
+    <div class="sl">신체활동 증진 계획 (SMART 목표)</div>
+    <div class="fr1"><input class="fi" type="text" placeholder="예: 학교 등하교 시 10분 걷기 추가, 주 3회 방과 후 자전거 30분"></div>
+  </div>
+</div>
+
+<!-- 섹션 10: 프로그램 질 관리 (2024 신설) -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum n9" style="background:#E1F5EE;color:#085041;">10</div>
+    <span class="stitle">프로그램 질 관리 평가</span>
+    <span class="badge b-new">2024 신설 핵심 구성요소</span>
+    <span class="ssa-ref">근거: ACC/AHA 성과 지표 · Million Hearts · AACVPR 인증</span>
+  </div>
+  <div class="sb">
+    <div class="alg"><i class="ti ti-award" aria-hidden="true"></i><p>2024 가장 큰 변화: 프로그램 질 관리가 새로운 핵심 구성요소로 신설. 단순 환자 단위 성과를 넘어 시스템·프로그램 수준의 질 평가 및 형평성 증진이 CR의 핵심 의무로 격상됨.</p></div>
+    <div class="pq-grid">
+      <div class="pq-box">
+        <div class="pq-icon" style="color:#534AB7;"><i class="ti ti-building-hospital" aria-hidden="true"></i></div>
+        <div class="pq-lbl">시스템 수준 (병원·외래 의뢰율)</div>
+        <select class="pq-sel"><option>-- 선택 --</option><option>의뢰 경로 확인됨</option><option>의뢰 누락 위험</option><option>의뢰 체계 개선 필요</option></select>
+      </div>
+      <div class="pq-box">
+        <div class="pq-icon" style="color:#1D9E75;"><i class="ti ti-users" aria-hidden="true"></i></div>
+        <div class="pq-lbl">프로그램 수준 (등록·순응·완료율)</div>
+        <select class="pq-sel"><option>-- 선택 --</option><option>등록 완료</option><option>등록 장벽 있음</option><option>탈락 위험 높음</option></select>
+      </div>
+      <div class="pq-box">
+        <div class="pq-icon" style="color:#BA7517;"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
+        <div class="pq-lbl">환자 수준 (기능·위험인자·우울)</div>
+        <select class="pq-sel"><option>-- 선택 --</option><option>성과 측정 계획 수립</option><option>기저치 측정 완료</option><option>추적 불가 우려</option></select>
+      </div>
+    </div>
+    <div class="sl">형평성 — 취약 집단 해당 여부 (AACVPR 2024 강조)</div>
+    <div class="cg">
+      <label class="ci"><input type="checkbox"> 심부전 / 안정형 협심증 (참여율 매우 낮음)</label>
+      <label class="ci"><input type="checkbox"> 여성 (참여율 저조 집단)</label>
+      <label class="ci"><input type="checkbox"> 소수 인종·민족</label>
+      <label class="ci"><input type="checkbox"> 비영어권 / 한국어 외 사용</label>
+      <label class="ci"><input type="checkbox"> 농촌 거주 / 원거리 (교통 장벽)</label>
+      <label class="ci"><input type="checkbox"> 사회경제적 취약 계층</label>
+    </div>
+    <div class="sl">CR 제공 형태 권고 (하이브리드 모델)</div>
+    <div class="rc">
+      <div class="rci"><div class="rcl">센터 기반 대면</div><select class="pq-sel"><option>-- --</option><option>주 프로그램</option><option>일부 세션</option><option>해당 없음</option></select></div>
+      <div class="rci"><div class="rcl">가상(동기적, 실시간 화상)</div><select class="pq-sel"><option>-- --</option><option>주 프로그램</option><option>일부 세션</option><option>해당 없음</option></select></div>
+      <div class="rci"><div class="rcl">원격(비동기적, 모니터링)</div><select class="pq-sel"><option>-- --</option><option>주 프로그램</option><option>일부 세션</option><option>해당 없음</option></select></div>
+    </div>
+    <div class="fr1">
+      <div class="fl">질 관리 장벽 및 개선 계획</div>
+      <textarea class="fta" placeholder="예: 원거리 거주로 대면 참여 제한 → 하이브리드 모델 적용. 우울 선별 양성 → 소아정신건강의학과 협진. 의뢰-등록 경로 표준화 필요."></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- 종합 소견 -->
+<div class="sec">
+  <div class="sh">
+    <div class="snum" style="background:#F1EFE8;color:#444441;">★</div>
+    <span class="stitle">스크리닝 종합 소견 — 의사 진료 전달 사항</span>
+    <span class="badge b-req">진료 전 완성 필수</span>
+  </div>
+  <div class="sb">
+    <div class="fr">
+      <div><div class="fl">절대 금기 해당 여부</div><select class="fs"><option>없음 (CR 진행 가능)</option><option>있음 → 의뢰 보류·주치의 알림</option></select></div>
+      <div><div class="fl">종합 위험 분류</div><select class="fs"><option>-- 선택 --</option><option>저위험</option><option>중등도 위험</option><option>고위험</option></select></div>
+    </div>
+    <div class="fr1"><div class="fl">의사 진료 전달 메모 (미해결 항목·협진 의뢰·추가 검사 요청 등)</div>
+    <textarea class="fta" style="height:70px;" placeholder="예: ①체성분 평가(BIA) 금일 시행, DXA 예약 필요 ②PHQ-A 13점→소정과 협진 ③이상지혈증 LDL 98mg/dL 목표 미달→스타틴 조정 검토 ④Fontan 환자: 운동부하검사 선시행 후 HRR 기반 처방 ⑤원격 CR 희망→인터넷 환경 확인 완료"></textarea>
+    </div>
+    <div class="two-col" style="margin-top:8px;">
+      <div><div class="fl">스크리닝 시행자 성명</div><input class="fi" type="text" placeholder="담당 간호사 / 운동처방사"></div>
+      <div><div class="fl">서명일</div><input class="fi" type="text" placeholder="YYYY-MM-DD"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 푸터 -->
+<div class="footer">
+  <div><p style="font-weight:500;color:var(--color-text-primary);font-size:11px;margin-bottom:2px;">스크리닝 완료 후 다음 단계</p><p>의사 진료 체크리스트 · 개별화 치료계획(ITP) · 운동 처방전 생성 가능</p></div>
+  <button class="btn" onclick="sendPrompt('스크리닝 결과를 바탕으로 의사 진료용 체크리스트와 2024 가이드라인 기반 개별화 치료계획(ITP) 초안, 운동 처방전을 작성해줘')">의사 진료 체크리스트 + ITP 생성 ↗</button>
+</div>
+
+</div>
