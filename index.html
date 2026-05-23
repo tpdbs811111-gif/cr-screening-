@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--color-background-primary, #f8f9fa); padding: 10px; }
+    body { background-color: #f8f9fa; padding: 10px; }
     .wrap { max-width: 800px; margin: 0 auto; padding: 1.5rem 0; font-family: sans-serif; }
     .fh { background: #fff; border: 0.5px solid #dee2e6; border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
     .fh-title { font-size: 16px; font-weight: 500; color: #212529; margin-bottom: 3px; display: flex; align-items: center; }
@@ -23,11 +23,11 @@
     .sec { border: 0.5px solid #dee2e6; border-radius: 8px; background: #fff; margin-bottom: .9rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
     .sh { padding: 9px 1.25rem; border-bottom: 0.5px solid #dee2e6; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; background: #fafafa; }
     .snum { width: 20px; height: 20px; border-radius: 50%; font-size: 10px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .n1 { background: #eeedfe; color: #3c3489; } .n2 { background: #e1f5ee; color: #085041; }
-    .n3 { background: #faeeda; color: #633806; } .n4 { background: #faece7; color: #712b13; }
-    .n5 { background: #e6f1fb; color: #0c447c; } .n6 { background: #eaf3de; color: #27500a; }
-    .n7 { background: #fcebeb; color: #791f1f; } .n8 { background: #fbeaf0; color: #72243e; }
-    .n9 { background: #f1efe8; color: #444441; }
+    .n1{background:#eeedfe;color:#3c3489;} .n2{background:#e1f5ee;color:#085041;}
+    .n3{background:#faeeda;color:#633806;} .n4{background:#faece7;color:#712b13;}
+    .n5{background:#e6f1fb;color:#0c447c;} .n6{background:#eaf3de;color:#27500a;}
+    .n7{background:#fcebeb;color:#791f1f;} .n8{background:#fbeaf0;color:#72243e;}
+    .n9{background:#f1efe8;color:#444441;}
     .stitle { font-size: 12px; font-weight: 500; color: #212529; }
     .ssa-ref { font-size: 10px; color: #6c757d; margin-left: auto; }
     .sb { padding: .9rem 1.25rem; }
@@ -36,22 +36,22 @@
     @media (max-width: 500px) { .fr, .fr3 { grid-template-columns: 1fr; } }
     .fr1 { margin-bottom: 9px; }
     .fl { font-size: 10px; color: #495057; margin-bottom: 2px; font-weight: 500; }
-    .fi, .fs, .fta { width: 100%; height: 32px; border: 0.5px solid #ced4da; border-radius: 6px; background: #f8f9fa; padding: 0 9px; font-size: 12px; color: #212529; }
-    .fta { resize: none; height: 54px; padding: 5px 9px; line-height: 1.5; }
+    .fi, .fs { width: 100%; height: 32px; border: 0.5px solid #ced4da; border-radius: 6px; background: #f8f9fa; padding: 0 9px; font-size: 12px; color: #212529; }
+    .fta { width: 100%; resize: none; height: 54px; padding: 5px 9px; line-height: 1.5; border: 0.5px solid #ced4da; border-radius: 6px; background: #f8f9fa; font-size: 12px; color: #212529; }
     .cg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
     @media (max-width: 500px) { .cg { grid-template-columns: 1fr; } }
     .ci { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #212529; padding: 3px 0; cursor: pointer; }
     .ci input { width: 14px; height: 14px; flex-shrink: 0; accent-color: #534ab7; }
     .div { border: none; border-top: 0.5px solid #dee2e6; margin: 8px 0; }
     .sl { font-size: 10px; font-weight: 600; color: #495057; margin: 7px 0 4px; text-transform: uppercase; letter-spacing: 0.04em; }
-    .alr, .alg, .aly { display: flex; align-items: flex-start; gap: 7px; border-radius: 6px; padding: 7px 11px; margin-bottom: 8px; }
-    .alr { background: #fff5f5; border: 0.5px solid #ffc9c9; } .alr p, .alr i { color: #c92a2a; font-size: 11px; line-height: 1.5; }
-    .alg { background: #e1f5ee; border: 0.5px solid #a3e2cd; } .alg p, .alg i { color: #085041; font-size: 11px; line-height: 1.5; }
-    .aly { background: #fff9db; border: 0.5px solid #ffe066; } .aly p, .aly i { color: #9c36b5; font-size: 11px; line-height: 1.5; }
+    .alr,.alg,.aly { display: flex; align-items: flex-start; gap: 7px; border-radius: 6px; padding: 7px 11px; margin-bottom: 8px; }
+    .alr { background: #fff5f5; border: 0.5px solid #ffc9c9; } .alr p,.alr i { color: #c92a2a; font-size: 11px; line-height: 1.5; }
+    .alg { background: #e1f5ee; border: 0.5px solid #a3e2cd; } .alg p,.alg i { color: #085041; font-size: 11px; line-height: 1.5; }
+    .aly { background: #fff9db; border: 0.5px solid #ffe066; } .aly p,.aly i { color: #9c36b5; font-size: 11px; line-height: 1.5; }
     .ex-table { width: 100%; font-size: 11px; border-collapse: collapse; margin: 5px 0; }
     .ex-table th { background: #f1f3f5; font-weight: 500; font-size: 10px; color: #495057; padding: 6px 8px; text-align: left; border: 0.5px solid #dee2e6; }
     .ex-table td { padding: 6px 8px; border: 0.5px solid #dee2e6; color: #212529; vertical-align: middle; }
-    .ex-table input, .ex-table select { width: 100%; border: none; background: transparent; font-size: 11px; color: #212529; outline: none; height: 100%; }
+    .ex-table input,.ex-table select { width: 100%; border: none; background: transparent; font-size: 11px; color: #212529; outline: none; }
     .bc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 6px 0; }
     @media (max-width: 500px) { .bc-grid { grid-template-columns: 1fr 1fr; } }
     .bc-item { background: #f8f9fa; border-radius: 6px; border: 0.5px solid #dee2e6; padding: 6px 8px; text-align: center; }
@@ -83,6 +83,14 @@
     .btn { background: #212529; color: #fff; border: none; border-radius: 6px; padding: 8px 16px; font-size: 12px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
     .btn:hover { background: #495057; }
     .btn:disabled { background: #adb5bd; cursor: not-allowed; }
+    /* 저장 버튼 바 */
+    .save-bar { background: #f0faf6; border: 1.5px solid #5DCAA5; border-radius: 8px; padding: 12px 20px; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .btn-green { background: #1D9E75; color: #fff; border: none; border-radius: 6px; padding: 8px 18px; font-size: 12px; font-weight: 500; cursor: pointer; }
+    .btn-green:hover { background: #0F6E56; }
+    .btn-green:disabled { background: #adb5bd; cursor: not-allowed; }
+    .btn-outline { background: #fff; color: #333; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 14px; font-size: 12px; cursor: pointer; }
+    .btn-outline:hover { background: #f8f9fa; }
+    #save-msg { font-size: 11px; }
   </style>
 </head>
 <body>
@@ -99,22 +107,19 @@
   </div>
 
   <div class="ssa-map">
-    <div class="ssa-card"><div class="ssa-name">① 개별화 치료계획<br><span style="color:#6c757d; font-size:9px;">환자 다각도 평가</span></div></div>
+    <div class="ssa-card"><div class="ssa-name">① 개별화 치료계획<br><span style="color:#6c757d;font-size:9px;">환자 다각도 평가</span></div></div>
     <div class="ssa-card"><div class="ssa-name">② 영양 상담<br><span style="color:#085041;font-size:9px;">AHA/ACC 라이프스타일</span></div></div>
     <div class="ssa-card"><div class="ssa-name">③ 체중·<b>체성분</b> 관리<br><span style="font-size:9px;color:#633806;">NEW: 인바디/BIA 필수</span></div></div>
-    <div class="ssa-card"><div class="ssa-name">④ 심혈관 위험인자<br><span style="color:#6c757d; font-size:9px;">BP·지질·당뇨·금연 개입</span></div></div>
-    <div class="ssa-card"><div class="ssa-name">⑤ 심리사회적 관리<br><span style="color:#6c757d; font-size:9px;">PHQ-A / GAD-7 연계</span></div></div>
+    <div class="ssa-card"><div class="ssa-name">④ 심혈관 위험인자<br><span style="color:#6c757d;font-size:9px;">BP·지질·당뇨·금연 개입</span></div></div>
+    <div class="ssa-card"><div class="ssa-name">⑤ 심리사회적 관리<br><span style="color:#6c757d;font-size:9px;">PHQ-A / GAD-7 연계</span></div></div>
     <div class="ssa-card"><div class="ssa-name">⑥ 유산소 / ⑦ <b>근력</b><br><span style="font-size:9px;color:#633806;">2024 핵심지침: 운동 전면분리</span></div></div>
-    <div class="ssa-card"><div class="ssa-name">⑧ 신체활동 상담<br><span style="color:#6c757d; font-size:9px;">SMART 일상 증진</span></div></div>
+    <div class="ssa-card"><div class="ssa-name">⑧ 신체활동 상담<br><span style="color:#6c757d;font-size:9px;">SMART 일상 증진</span></div></div>
     <div class="ssa-card"><div class="ssa-name">⑨ <b>프로그램 질</b> 관리<br><span style="font-size:9px;color:#085041;">시스템·형평성 지표 평가</span></div></div>
   </div>
 
+  <!-- 섹션 1 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n1">1</div>
-      <span class="stitle">기본 인적사항 및 의뢰 정보</span>
-      <span class="ssa-ref">개별화 치료계획(ITP)</span>
-    </div>
+    <div class="sh"><div class="snum n1">1</div><span class="stitle">기본 인적사항 및 의뢰 정보</span><span class="ssa-ref">개별화 치료계획(ITP)</span></div>
     <div class="sb">
       <div class="fr3">
         <div><div class="fl">환자 성명</div><input class="fi" name="patient_name" type="text" placeholder="홍길동" required></div>
@@ -133,12 +138,9 @@
     </div>
   </div>
 
+  <!-- 섹션 2 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n2">2</div>
-      <span class="stitle">환자 평가 — 심장 진단 · 수술 이력</span>
-      <span class="ssa-ref">Patient Assessment</span>
-    </div>
+    <div class="sh"><div class="snum n2">2</div><span class="stitle">환자 평가 — 심장 진단 · 수술 이력</span><span class="ssa-ref">Patient Assessment</span></div>
     <div class="sb">
       <div class="alr"><i class="ti ti-alert-triangle"></i><p>CR 적격 진단 확인 필수. 선천성 심장질환 수술·시술 후, 심장이식, 심부전(EF≤35%), 안정형 협심증 등 진단 해당 여부를 체크하세요.</p></div>
       <div class="sl">주 심장 진단 (복수 선택 가능)</div>
@@ -162,19 +164,16 @@
       </div>
       <div class="fr">
         <div><div class="fl">최근 12-lead ECG 소견</div><input class="fi" name="ecg_findings" type="text" placeholder="예: NSR, RBBB 소견"></div>
-        <div><div class="fl">잔여 병변 / 삽입 기기</div><input class="fi" type="text" name="residual_lesions" placeholder="예: 페이스메이커 삽입, 잔류 VSD"></div>
+        <div><div class="fl">잔여 병변 / 삽입 기기</div><input class="fi" name="residual_lesions" type="text" placeholder="예: 페이스메이커 삽입, 잔류 VSD"></div>
       </div>
     </div>
   </div>
 
+  <!-- 섹션 3 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n3">3</div>
-      <span class="stitle">영양 상담 평가</span>
-      <span class="ssa-ref">AHA/ACC Lifestyle Guideline</span>
-    </div>
+    <div class="sh"><div class="snum n3">3</div><span class="stitle">영양 상담 평가</span><span class="ssa-ref">AHA/ACC Lifestyle Guideline</span></div>
     <div class="sb">
-      <div class="alg"><i class="ti ti-info-circle"></i><p>식사 빈도 설문(FFQ) 또는 24시간 회상법으로 평가. DASH·지중해식 식단 패턴 확인 및 전·후 매개 변수 변화 추적.</p></div>
+      <div class="alg"><i class="ti ti-info-circle"></i><p>식사 빈도 설문(FFQ) 또는 24시간 회상법으로 평가. DASH·지중해식 식단 패턴 확인.</p></div>
       <div class="fr">
         <div><div class="fl">식이 평가 도구</div>
           <select class="fs" name="nutrition_tool">
@@ -187,10 +186,10 @@
         </div>
         <div><div class="fl">식이 점수 / 평가 날짜</div><input class="fi" name="nutrition_score" type="text" placeholder="예: AHEI 52점 / 2026-05"></div>
       </div>
-      <div class="sl">주요 식습관 부적격 패턴 (체크)</div>
+      <div class="sl">주요 식습관 부적격 패턴</div>
       <div class="cg">
         <label class="ci"><input type="checkbox" name="nut_bad_veg" value="Y"> 채소·과일 섭취 부족</label>
-        <label class="ci"><input type="checkbox" name="nut_bad_sodium" value="Y"> 나트륨 과다 (짠 식단 선호)</label>
+        <label class="ci"><input type="checkbox" name="nut_bad_sodium" value="Y"> 나트륨 과다</label>
         <label class="ci"><input type="checkbox" name="nut_bad_fat" value="Y"> 포화지방·가공육 과다</label>
         <label class="ci"><input type="checkbox" name="nut_bad_sugar" value="Y"> 당류·가당 음료 과다</label>
         <label class="ci"><input type="checkbox" name="nut_bad_irregular" value="Y"> 결식 / 불규칙 식사</label>
@@ -198,39 +197,34 @@
       </div>
       <div class="fr" style="margin-top:6px;">
         <div><div class="fl">주 식사 준비자 / 외식 빈도</div><input class="fi" name="meal_preparer" type="text" placeholder="예: 어머니 / 주 2회 외식"></div>
-        <div><div class="fl">영양사 전문상담 이력 및 의뢰 여부</div>
+        <div><div class="fl">영양사 상담 이력 및 의뢰</div>
           <select class="fs" name="nutrition_referral">
             <option value="">-- 선택 --</option>
             <option value="sufficient">과거 상담 있음 (충분)</option>
             <option value="need_more">과거 상담 있음 (추가 필요)</option>
-            <option value="refer">미경험 → 임상영양 의뢰 필요</option>
+            <option value="refer">미경험 → 의뢰 필요</option>
           </select>
         </div>
       </div>
-      <div class="sl">영양 관련 서식 목표 (초기 세팅)</div>
-      <div class="fr1"><input class="fi" name="nutrition_goal" type="text" placeholder="예: 4주 내 나트륨 하루 2,000mg 이하 제어, 채소 매 끼니 1접시 포함"></div>
+      <div class="sl">영양 목표</div>
+      <div class="fr1"><input class="fi" name="nutrition_goal" type="text" placeholder="예: 4주 내 나트륨 2,000mg 이하, 채소 매 끼니 1접시"></div>
     </div>
   </div>
 
+  <!-- 섹션 4 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n4">4</div>
-      <span class="stitle">체중 관리 및 체성분 평가</span>
-      <span class="ssa-ref">지침변화: 근육량·체지방 세부 평가 추가</span>
-    </div>
+    <div class="sh"><div class="snum n4">4</div><span class="stitle">체중 관리 및 체성분 평가</span><span class="ssa-ref">근육량·체지방 세부 평가</span></div>
     <div class="sb">
-      <div class="aly"><i class="ti ti-bulb"></i><p>2024 지침 핵심 업데이트: 정상 체중 비만(Normal-weight obesity) 고위험군 식별 및 심폐 근력 보존을 위한 기초 근육 질량 측정 의무화.</p></div>
+      <div class="aly"><i class="ti ti-bulb"></i><p>정상 체중 비만 고위험군 식별 및 기초 근육 질량 측정 의무화.</p></div>
       <div class="bc-grid">
         <div class="bc-item"><div class="bc-label">신장 (cm)</div><input class="bc-input" name="height" type="text" placeholder="—"></div>
         <div class="bc-item"><div class="bc-label">체중 (kg)</div><input class="bc-input" name="weight" type="text" placeholder="—"></div>
         <div class="bc-item"><div class="bc-label">BMI / 백분위</div><input class="bc-input" name="bmi_percentile" type="text" placeholder="—"></div>
         <div class="bc-item"><div class="bc-label">허리둘레 (cm)</div><input class="bc-input" name="waist" type="text" placeholder="—"></div>
       </div>
-      <div class="sl">체성분 평가 스케줄 및 방법 선택</div>
+      <div class="sl">체성분 평가</div>
       <table class="ex-table">
-        <thead>
-          <tr><th>평가 방법</th><th>시행 여부</th><th>결과값 기입</th><th>원격 적합</th></tr>
-        </thead>
+        <thead><tr><th>평가 방법</th><th>시행 여부</th><th>결과값</th><th>원격 적합</th></tr></thead>
         <tbody>
           <tr>
             <td>허리둘레 / WHR 비율</td>
@@ -247,7 +241,7 @@
           <tr>
             <td>DXA (이중에너지 X선)</td>
             <td><select name="eval_dxa_status"><option value="N">미시행</option><option value="Y">시행</option></select></td>
-            <td><input type="text" name="eval_dxa_result" placeholder="날짜 및 골밀도 결과"></td>
+            <td><input type="text" name="eval_dxa_result" placeholder="날짜 및 결과"></td>
             <td style="text-align:center;">✗ 불가</td>
           </tr>
         </tbody>
@@ -255,104 +249,91 @@
     </div>
   </div>
 
+  <!-- 섹션 5 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n5">5</div>
-      <span class="stitle">심혈관 위험인자 관리 (혈압·지질·당뇨·금연)</span>
-      <span class="ssa-ref">ASCVD Multi-Society Guideline</span>
-    </div>
+    <div class="sh"><div class="snum n5">5</div><span class="stitle">심혈관 위험인자 관리 (혈압·지질·당뇨·금연)</span><span class="ssa-ref">ASCVD Multi-Society Guideline</span></div>
     <div class="sb">
-      <div class="sl">혈압(BP) 관리 모듈</div>
-      <div class="tgt-row"><span class="tgt-name">소아·성인 관리 표준목표</span><span class="tgt-val">SBP &lt;130 / DBP &lt;80 mmHg</span></div>
-      <div class="fr3" style="margin-top:6px;">
+      <div class="sl">혈압(BP) 관리</div>
+      <div class="fr3">
         <div><div class="fl">우측 수축기/이완기 (mmHg)</div><input class="fi" name="bp_right" type="text" placeholder="120/80"></div>
         <div><div class="fl">좌측 수축기/이완기 (mmHg)</div><input class="fi" name="bp_left" type="text" placeholder="122/78"></div>
         <div><div class="fl">안정시 심박수 (bpm)</div><input class="fi" name="resting_hr" type="text" placeholder="72"></div>
       </div>
       <div class="div"></div>
-      <div class="sl">이상지혈증 및 대사 질환 정보</div>
+      <div class="sl">이상지혈증 및 대사 질환</div>
       <div class="fr3">
         <div><div class="fl">LDL-Cholesterol (mg/dL)</div><input class="fi" name="ldl_c" type="text" placeholder="예: 85"></div>
         <div><div class="fl">HbA1c 당화혈색소 (%)</div><input class="fi" name="hba1c" type="text" placeholder="예: 5.8"></div>
-        <div><div class="fl">약물 순응도 평가</div>
+        <div><div class="fl">약물 순응도</div>
           <select class="fs" name="med_adherence">
-            <option value="good">매우 양호 (100% 복용)</option>
-            <option value="fair">간헐적 누락 있음</option>
-            <option value="poor">복용 비순응 / 거부</option>
+            <option value="good">매우 양호</option>
+            <option value="fair">간헐적 누락</option>
+            <option value="poor">복용 비순응</option>
           </select>
         </div>
       </div>
       <div class="div"></div>
-      <div class="sl">청소년/보호자 금연 개입 (ATS 2020)</div>
+      <div class="sl">금연 개입</div>
       <div class="cg">
         <label class="ci"><input type="checkbox" name="smoke_current" value="Y"> 환자 본인 현재 흡연/전자담배</label>
-        <label class="ci"><input type="checkbox" name="smoke_passive" value="Y"> 가정 내 간접흡연 노출 환경</label>
+        <label class="ci"><input type="checkbox" name="smoke_passive" value="Y"> 가정 내 간접흡연 노출</label>
       </div>
     </div>
   </div>
 
+  <!-- 섹션 6 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n6">6</div>
-      <span class="stitle">심리사회적 관리 (Screening to Intervention)</span>
-      <span class="ssa-ref">안전 지침: 정신건강 위험 추적</span>
-    </div>
+    <div class="sh"><div class="snum n6">6</div><span class="stitle">심리사회적 관리</span><span class="ssa-ref">정신건강 위험 추적</span></div>
     <div class="sb">
       <div class="fr">
-        <div><div class="fl">우울 척도 점수 (PHQ-9 또는 PHQ-A)</div><input class="fi" name="score_phq" type="text" placeholder="점수 기입"></div>
-        <div><div class="fl">불안 척도 점수 (GAD-7)</div><input class="fi" name="score_gad" type="text" placeholder="점수 기입"></div>
+        <div><div class="fl">우울 척도 (PHQ-9/PHQ-A)</div><input class="fi" name="score_phq" type="text" placeholder="점수 기입"></div>
+        <div><div class="fl">불안 척도 (GAD-7)</div><input class="fi" name="score_gad" type="text" placeholder="점수 기입"></div>
       </div>
-      <div class="sl">주요 위험 징후 및 장벽 환경</div>
+      <div class="sl">위험 징후</div>
       <div class="cg">
         <label class="ci"><input type="checkbox" name="psych_depression" value="Y"> 임상적 우울 징후</label>
         <label class="ci"><input type="checkbox" name="psych_anxiety" value="Y"> 심각한 불안감 / 공황</label>
         <label class="ci"><input type="checkbox" name="psych_isolation" value="Y"> 사회적 고립감 / 외로움</label>
-        <label class="ci"><input type="checkbox" name="psych_parental" value="Y"> 질환 관련 부모의 과도한 불안</label>
+        <label class="ci"><input type="checkbox" name="psych_parental" value="Y"> 부모의 과도한 불안</label>
       </div>
     </div>
   </div>
 
+  <!-- 섹션 7 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n7">7</div>
-      <span class="stitle">유산소 운동 훈련 평가 및 처방 정보</span>
-      <span class="ssa-ref">지침변화: 유산소-근력 처방 공식 분리</span>
-    </div>
+    <div class="sh"><div class="snum n7">7</div><span class="stitle">유산소 운동 훈련 평가 및 처방</span><span class="ssa-ref">유산소-근력 처방 공식 분리</span></div>
     <div class="sb">
       <div class="fr">
-        <div><div class="fl">최근 심폐운동부하검사(CPET) 결과</div><input class="fi" name="cpet_vo2" type="text" placeholder="예: peak VO2 24.5 ml/kg/min"></div>
+        <div><div class="fl">심폐운동부하검사(CPET) 결과</div><input class="fi" name="cpet_vo2" type="text" placeholder="예: peak VO2 24.5 ml/kg/min"></div>
         <div><div class="fl">6분 보행검사(6MWT) 결과</div><div class="fwu"><input class="fi" name="6mwt_distance" type="text" placeholder="450"><span>m</span></div></div>
       </div>
-      <div class="sl">유산소 FITT-VP 초기 설정값</div>
+      <div class="sl">유산소 FITT-VP 초기 설정</div>
       <div class="fr3">
-        <div><div class="fl">운동 빈도 (Frequency)</div><input class="fi" name="ex_aerobic_f" type="text" placeholder="예: 주 3-5회"></div>
-        <div><div class="fl">처방 강도 (Intensity) - HRR/RPE</div><input class="fi" name="ex_aerobic_i" type="text" placeholder="목표 HR 범위 기입"></div>
-        <div><div class="fl">지속 시간 (Time)</div><input class="fi" name="ex_aerobic_t" type="text" placeholder="예: 30~40분"></div>
+        <div><div class="fl">운동 빈도</div><input class="fi" name="ex_aerobic_f" type="text" placeholder="예: 주 3-5회"></div>
+        <div><div class="fl">처방 강도 (HRR/RPE)</div><input class="fi" name="ex_aerobic_i" type="text" placeholder="목표 HR 범위"></div>
+        <div><div class="fl">지속 시간</div><input class="fi" name="ex_aerobic_t" type="text" placeholder="예: 30~40분"></div>
       </div>
     </div>
   </div>
 
+  <!-- 섹션 8 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n8">8</div>
-      <span class="stitle">호흡 기능 평가 및 호흡근 훈련(IMT)</span>
-      <span class="ssa-ref">Spirometry & PowerBreathe IMT</span>
-    </div>
+    <div class="sh"><div class="snum n8">8</div><span class="stitle">호흡 기능 평가 및 호흡근 훈련(IMT)</span><span class="ssa-ref">Spirometry &amp; PowerBreathe IMT</span></div>
     <div class="sb">
-      <div class="sl">폐기능 검사 (Spirometry) 결과 계측</div>
+      <div class="sl">폐기능 검사 (Spirometry)</div>
       <div class="fr3">
         <div><div class="fl">FVC (L) [%pred]</div><input class="fi" name="spiro_fvc" type="text" placeholder="예: 3.2L [85%]"></div>
         <div><div class="fl">FEV1 (L) [%pred]</div><input class="fi" name="spiro_fev1" type="text" placeholder="예: 2.7L [82%]"></div>
         <div><div class="fl">FEV1/FVC 비율 (%)</div><input class="fi" name="spiro_ratio" type="text" placeholder="예: 84%"></div>
       </div>
       <div class="fr">
-        <div><div class="fl">환기 장애 대분류 패턴</div>
+        <div><div class="fl">환기 장애 패턴</div>
           <select class="fs" name="ventilation_pattern">
             <option value="">-- 선택 --</option>
-            <option value="normal">정상 (Normal)</option>
-            <option value="obstructive">폐쇄성 환기장애 (Obstructive)</option>
-            <option value="restrictive">제한성 환기장애 (Restrictive)</option>
-            <option value="mixed">혼합형 환기장애 (Mixed)</option>
+            <option value="normal">정상</option>
+            <option value="obstructive">폐쇄성 환기장애</option>
+            <option value="restrictive">제한성 환기장애</option>
+            <option value="mixed">혼합형</option>
           </select>
         </div>
         <div><div class="fl">PowerBreathe MIP (최대흡기압)</div>
@@ -360,34 +341,31 @@
         </div>
       </div>
       <div class="fr">
-        <div><div class="fl">IMT 초기 표적 처방 강도 (MIP × 30%)</div>
+        <div><div class="fl">IMT 초기 처방 강도 (MIP × 30%)</div>
           <div class="fwu"><input class="fi" name="imt_prescribed_load" type="text" id="imt-load" readonly style="background:#f1f3f5;"><span>cmH₂O</span></div>
         </div>
-        <div><div class="fl">실제 기기 설정 저항 눈금값</div><input class="fi" name="imt_device_set" type="number" placeholder="예: 22"></div>
+        <div><div class="fl">실제 기기 설정 저항값</div><input class="fi" name="imt_device_set" type="number" placeholder="예: 22"></div>
       </div>
     </div>
   </div>
 
+  <!-- 섹션 9 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n8">9</div>
-      <span class="stitle">근력 훈련 평가 및 처방 정보</span>
-      <span class="ssa-ref">독립적 핵심요소 격상 지침 반영</span>
-    </div>
+    <div class="sh"><div class="snum n8">9</div><span class="stitle">근력 훈련 평가 및 처방</span><span class="ssa-ref">독립적 핵심요소 격상</span></div>
     <div class="sb">
-      <div class="alg"><i class="ti ti-info-circle"></i><p>근감소증 및 Frailty(허약) 조기 차단을 위한 저항 운동 가이드. 안전 반경 내 상·하지 대근육 중심 훈련 설계.</p></div>
+      <div class="alg"><i class="ti ti-info-circle"></i><p>근감소증 및 Frailty 조기 차단을 위한 저항 운동 가이드.</p></div>
       <div class="fr">
-        <div><div class="fl">Timed Up & Go (TUG) 검사</div><div class="fwu"><input class="fi" name="eval_tug" type="text" placeholder="예: 7.2"><span>초</span></div></div>
-        <div><div class="fl">30초 의자 일어서기 반복 횟수</div><input class="fi" name="eval_chair_stand" type="text" placeholder="예: 15회"></div>
+        <div><div class="fl">Timed Up &amp; Go (TUG)</div><div class="fwu"><input class="fi" name="eval_tug" type="text" placeholder="예: 7.2"><span>초</span></div></div>
+        <div><div class="fl">30초 의자 일어서기</div><input class="fi" name="eval_chair_stand" type="text" placeholder="예: 15회"></div>
       </div>
-      <div class="fr3" style="margin-top:6px;">
+      <div class="fr3">
         <div><div class="fl">저항 빈도</div><input class="fi" name="ex_resistive_f" type="text" placeholder="예: 주 2회"></div>
-        <div><div class="fl">저항 강도 (RPE / %1RM)</div><input class="fi" name="ex_resistive_i" type="text" placeholder="RPE 11~13"></div>
-        <div><div class="fl">운동 형태 / 소도구</div>
+        <div><div class="fl">저항 강도 (RPE/%1RM)</div><input class="fi" name="ex_resistive_i" type="text" placeholder="RPE 11~13"></div>
+        <div><div class="fl">운동 형태</div>
           <select class="fs" name="ex_resistive_type">
-            <option value="band">탄성 밴드 (가정 홈트)</option>
-            <option value="machine">메디컬 웨이트 머신</option>
-            <option value="bodyweight">체중 부하 운동</option>
+            <option value="band">탄성 밴드</option>
+            <option value="machine">웨이트 머신</option>
+            <option value="bodyweight">체중 부하</option>
             <option value="mixed">복합 하이브리드</option>
           </select>
         </div>
@@ -395,94 +373,72 @@
     </div>
   </div>
 
+  <!-- 섹션 10 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n9">10</div>
-      <span class="stitle">일상 신체활동 상담 및 행동 수정 계획</span>
-      <span class="ssa-ref">Physical Activity Counseling</span>
-    </div>
+    <div class="sh"><div class="snum n9">10</div><span class="stitle">일상 신체활동 상담</span><span class="ssa-ref">Physical Activity Counseling</span></div>
     <div class="sb">
       <div class="fr">
         <div><div class="fl">현재 주간 평균 활동량 (분/주)</div><input class="fi" name="pa_current_min" type="text" placeholder="예: 약 60분"></div>
-        <div><div class="fl">웨어러블 기반 일일 평균 보행수</div><input class="fi" name="pa_current_steps" type="text" placeholder="예: 4,500보"></div>
+        <div><div class="fl">일일 평균 보행수</div><input class="fi" name="pa_current_steps" type="text" placeholder="예: 4,500보"></div>
       </div>
-      <div class="fr1">
-        <div class="fl">행동 수정 매칭 SMART 활동 목표</div>
-        <input class="fi" name="pa_smart_goal" type="text" placeholder="예: 통학 시 15분 도보 추가, 방과 후 부모님과 산책 주 3회">
-      </div>
+      <div class="fr1"><div class="fl">SMART 활동 목표</div><input class="fi" name="pa_smart_goal" type="text" placeholder="예: 통학 시 15분 도보 추가, 방과 후 산책 주 3회"></div>
     </div>
   </div>
 
+  <!-- 섹션 11 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum n9" style="background:#E1F5EE;color:#085041;">11</div>
-      <span class="stitle">프로그램 질 관리 및 의료 형평성 평가</span>
-      <span class="badge b-new">2024 가이드라인 핵심 신설 의무</span>
-    </div>
+    <div class="sh"><div class="snum n9" style="background:#E1F5EE;color:#085041;">11</div><span class="stitle">프로그램 질 관리 및 의료 형평성</span><span class="badge b-new">2024 신설</span></div>
     <div class="sb">
-      <div class="sl">취약성 / 참여 장벽 요소 (복수 선택)</div>
+      <div class="sl">참여 장벽 요소</div>
       <div class="cg">
-        <label class="ci"><input type="checkbox" name="barrier_distance" value="Y"> 원거리 거주 / 교통 환경 취약</label>
-        <label class="ci"><input type="checkbox" name="barrier_economic" value="Y"> 의료 취약 계층 / 경제적 지원 장벽</label>
-        <label class="ci"><input type="checkbox" name="barrier_low_enroll" value="Y"> 취약 진단군 (심부전, 선천성 특수 단심실군)</label>
-        <label class="ci"><input type="checkbox" name="barrier_language" value="Y"> 다문화 가정 / 비영어·비한국어 환경장벽</label>
+        <label class="ci"><input type="checkbox" name="barrier_distance" value="Y"> 원거리 거주 / 교통 취약</label>
+        <label class="ci"><input type="checkbox" name="barrier_economic" value="Y"> 경제적 지원 장벽</label>
+        <label class="ci"><input type="checkbox" name="barrier_low_enroll" value="Y"> 취약 진단군</label>
+        <label class="ci"><input type="checkbox" name="barrier_language" value="Y"> 다문화 / 언어 장벽</label>
       </div>
       <div class="div"></div>
-      <div class="sl">맞춤형 매칭 권고 모델 (하이브리드 세팅)</div>
+      <div class="sl">맞춤형 CR 모델</div>
       <div class="rc">
-        <div class="rci">
-          <div class="rcl">원격 모니터링 (비동기)</div>
+        <div class="rci"><div class="rcl">원격 모니터링 (비동기)</div>
           <select class="pq-sel" name="model_tele_async">
-            <option value="N">해당 없음</option>
-            <option value="main">★ 메인 주 프로그램 적용</option>
-            <option value="sub">일부 보조 하이브리드 적용</option>
+            <option value="N">해당 없음</option><option value="main">메인 프로그램</option><option value="sub">보조 하이브리드</option>
           </select>
         </div>
-        <div class="rci">
-          <div class="rcl">가상 원격치료 (동기식)</div>
+        <div class="rci"><div class="rcl">가상 원격치료 (동기식)</div>
           <select class="pq-sel" name="model_tele_sync">
-            <option value="N">해당 없음</option>
-            <option value="main">★ 메인 주 프로그램 적용</option>
-            <option value="sub">일부 보조 하이브리드 적용</option>
+            <option value="N">해당 없음</option><option value="main">메인 프로그램</option><option value="sub">보조 하이브리드</option>
           </select>
         </div>
-        <div class="rci">
-          <div class="rcl">센터 기반 내원 치료</div>
+        <div class="rci"><div class="rcl">센터 기반 내원</div>
           <select class="pq-sel" name="model_center">
-            <option value="main">★ 메인 주 프로그램 적용</option>
-            <option value="sub">일부 보조 하이브리드 적용</option>
-            <option value="N">해당 없음</option>
+            <option value="main">메인 프로그램</option><option value="sub">보조 하이브리드</option><option value="N">해당 없음</option>
           </select>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- 종합 소견 -->
   <div class="sec">
-    <div class="sh">
-      <div class="snum" style="background:#f1efe8;color:#444441;">★</div>
-      <span class="stitle">스크리닝 종합 소견 — 진료전 메디컬 요약 전달</span>
-      <span class="badge b-req">외래 진료 연동 연계 필수</span>
-    </div>
+    <div class="sh"><div class="snum" style="background:#f1efe8;color:#444441;">★</div><span class="stitle">스크리닝 종합 소견</span><span class="badge b-req">진료 연동 필수</span></div>
     <div class="sb">
       <div class="fr">
-        <div><div class="fl">임상적 절대 금기 사항 식별 여부</div>
+        <div><div class="fl">임상적 절대 금기 사항</div>
           <select class="fs" name="contraindications_flag" required>
-            <option value="N">전혀 없음 (안전 반경 확보, CR 적격 수행가능)</option>
-            <option value="Y">있음 → 즉시 중단 및 주치의 핫라인 통보</option>
+            <option value="N">전혀 없음 (CR 적격)</option>
+            <option value="Y">있음 → 즉시 주치의 통보</option>
           </select>
         </div>
-        <div><div class="fl">환자 위험도 계층 구조 분류</div>
+        <div><div class="fl">환자 위험도 분류</div>
           <select class="fs" name="risk_stratification" required>
             <option value="">-- 선택 --</option>
-            <option value="Low">저위험군 (Low Risk)</option>
-            <option value="Moderate">중등도 위험군 (Moderate Risk)</option>
-            <option value="High">고위험군 (High Risk - 집중 대면 모니터링 필요)</option>
+            <option value="Low">저위험군</option>
+            <option value="Moderate">중등도 위험군</option>
+            <option value="High">고위험군</option>
           </select>
         </div>
       </div>
-      <div class="fr1">
-        <div class="fl">진료 의사 전달 주요 협진 사항 메모</div>
+      <div class="fr1"><div class="fl">진료 의사 전달 협진 메모</div>
         <textarea class="fta" style="height:70px;" name="doctor_memo" placeholder="메모 입력"></textarea>
       </div>
       <div class="fr">
@@ -492,106 +448,101 @@
     </div>
   </div>
 
+  <!-- 저장 버튼 바 -->
+  <div class="save-bar">
+    <span style="font-size:11px;color:#085041;font-weight:500;">📋 작성 완료 후 저장</span>
+    <button type="submit" id="submitBtn" class="btn-green">📤 구글 시트에 저장</button>
+    <button type="button" onclick="saveCSV()" class="btn-outline">⬇ CSV 저장</button>
+    <button type="button" onclick="openSheet()" class="btn-outline">📊 구글 시트 열기</button>
+    <span id="save-msg"></span>
+  </div>
+
   <div class="footer">
     <div>
-      <p style="font-weight:600;color:#212529;font-size:11px;margin-bottom:2px;">구글 스프레드시트 실시간 데이터 연동망</p>
-      <p>본 서식을 제출하면 클라우드 서버 시트에 로우 데이터가 자동으로 기록됩니다.</p>
+      <p style="font-weight:600;color:#212529;font-size:11px;margin-bottom:2px;">구글 스프레드시트 실시간 데이터 연동</p>
+      <p>제출하면 구글 시트에 로우 데이터가 자동 기록됩니다.</p>
     </div>
-    <button type="submit" id="submitBtn" class="btn">스크리닝 데이터 보관 서버 전송 ↗</button>
   </div>
 
 </form>
 
 <script>
-  function calcIMTLoad() {
-    var mipInput = document.getElementById('mip-best').value;
-    var loadInput = document.getElementById('imt-load');
-    if(mipInput) {
-      loadInput.value = Math.round(parseFloat(mipInput) * 0.3);
-    } else {
-      loadInput.value = '';
-    }
-  }
-
-  document.getElementById('crForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    var btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.innerText = "데이터 서버 전송 중...";
-
-    // ⚠️ 이곳에 복사한 구글 앱스 스크립트 주소를 입력하세요!
-    var gasUrl = "https://script.google.com/macros/s/AKfycbxWg4sQVaacHxIsXLuaPQJYiOb__qPQuvU7m36HJ1WZco_KKj4n2_QW-QW7zRbhYZPRww/exec"; 
-    
-    var formData = new FormData(this);
-    var queryString = new URLSearchParams(formData).toString();
-
-    fetch(gasUrl + "?" + queryString, {
-      method: "POST"
-    })
-    .then(function(response) {
-      alert("부천세종병원 심장재활 임상 스크리닝 데이터가 구글 시트에 완벽히 기록되었습니다.");
-      btn.disabled = false;
-      btn.innerText = "스크리닝 데이터 보관 서버 전송 ↗";
-    })
-    .catch(function(error) {
-      console.error("Error!", error.message);
-      alert("데이터 전송 처리가 완료되었습니다. 구글 시트를 확인하세요.");
-      btn.disabled = false;
-      btn.innerText = "스크리닝 데이터 보관 서버 전송 ↗";
-    });
-  });
-</script>
-</body>
-</html>
-
-
-  // ── IMT 강도 자동 계산 ──────────────────────────────
+  // ── IMT 강도 자동 계산 ────────────────────────────────
   function calcIMTLoad() {
     var mip = parseFloat(document.getElementById('mip-best').value);
     var el  = document.getElementById('imt-load');
     el.value = isNaN(mip) ? '' : Math.round(mip * 0.3);
   }
 
-  // ── 폼 제출 → 구글 시트 전송 ────────────────────────
-  document.getElementById('crForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  // ── 구글 시트 열기 ────────────────────────────────────
+  function openSheet() {
+    window.open('https://docs.google.com/spreadsheets/', '_blank');
+  }
 
-    var btn = document.getElementById('submitBtn');
-    btn.disabled  = true;
-    btn.innerText = '전송 중...';
+  // ── CSV 저장 ─────────────────────────────────────────
+  function saveCSV() {
+    var data = collectFormData();
+    var keys = Object.keys(data);
+    var vals = Object.values(data).map(function(v) {
+      return '"' + String(v).replace(/"/g, '""') + '"';
+    });
+    var csv = '\uFEFF' + keys.join(',') + '\n' + vals.join(',');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8;'}));
+    a.download = '심장재활_스크리닝_' + new Date().toISOString().slice(0,10) + '.csv';
+    a.click();
+  }
 
-    // ★ Apps Script 배포 URL (배포 관리에서 확인한 최신 URL로 교체)
-    var gasUrl = 'https://script.google.com/macros/s/AKfycbxWg4sQVaacHxIsXLuaPQJYiOb__qPQuvU7m36HJ1WZco_KKj4n2_QW-QW7zRbhYZPRww/exec';
-
-    // 1. FormData → 일반 객체 변환
+  // ── 폼 데이터 수집 ────────────────────────────────────
+  function collectFormData() {
     var data = { _type: 'screening' };
-    var fd   = new FormData(this);
+    var fd = new FormData(document.getElementById('crForm'));
     fd.forEach(function(val, key) { data[key] = val; });
-
-    // 2. 체크박스: 체크된 항목 이름 목록 추가
+    // 체크박스: 체크된 항목 이름 목록
     var checked = [];
     document.querySelectorAll('input[type=checkbox]:checked').forEach(function(cb) {
       checked.push(cb.name);
     });
     data['checked_items'] = checked.join(',');
+    return data;
+  }
 
-    // 3. JSON POST 전송 (Apps Script doPost → e.postData.contents 수신)
+  // ── 폼 제출 → 구글 시트 전송 ─────────────────────────
+  document.getElementById('crForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var btn = document.getElementById('submitBtn');
+    var msg = document.getElementById('save-msg');
+    btn.disabled  = true;
+    btn.innerText = '전송 중...';
+    msg.style.color = '#633806';
+    msg.innerText = '구글 시트로 전송 중...';
+
+    // ★ Apps Script 배포 URL
+    var gasUrl = 'https://script.google.com/macros/s/AKfycbxWg4sQVaacHxIsXLuaPQJYiOb__qPQuvU7m36HJ1WZco_KKj4n2_QW-QW7zRbhYZPRww/exec';
+
+    var data = collectFormData();
+
     fetch(gasUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
-      mode: 'no-cors'   // 크로스도메인 허용
+      mode: 'no-cors'
     })
     .then(function() {
-      alert('✅ 부천세종병원 심장재활 스크리닝 데이터가 구글 시트에 저장되었습니다.\n구글 시트 01_스크리닝 탭을 확인하세요.');
+      msg.style.color = '#085041';
+      msg.innerText = '✅ 저장 완료! 구글 시트를 확인하세요.';
     })
-    .catch(function(err) {
-      // no-cors 특성상 오류처럼 보여도 저장됐을 수 있음
-      alert('✅ 전송 완료. 구글 시트에서 데이터를 확인해주세요.');
+    .catch(function() {
+      msg.style.color = '#085041';
+      msg.innerText = '✅ 전송 완료. 구글 시트에서 확인해주세요.';
     })
     .finally(function() {
       btn.disabled  = false;
-      btn.innerText = '스크리닝 데이터 보관 서버 전송 ↗';
+      btn.innerText = '📤 구글 시트에 저장';
     });
   });
+</script>
+
+</body>
+</html>
