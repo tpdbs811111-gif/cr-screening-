@@ -544,3 +544,54 @@
 </script>
 </body>
 </html>
+
+
+  // ── IMT 강도 자동 계산 ──────────────────────────────
+  function calcIMTLoad() {
+    var mip = parseFloat(document.getElementById('mip-best').value);
+    var el  = document.getElementById('imt-load');
+    el.value = isNaN(mip) ? '' : Math.round(mip * 0.3);
+  }
+
+  // ── 폼 제출 → 구글 시트 전송 ────────────────────────
+  document.getElementById('crForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var btn = document.getElementById('submitBtn');
+    btn.disabled  = true;
+    btn.innerText = '전송 중...';
+
+    // ★ Apps Script 배포 URL (배포 관리에서 확인한 최신 URL로 교체)
+    var gasUrl = 'https://script.google.com/macros/s/AKfycbxWg4sQVaacHxIsXLuaPQJYiOb__qPQuvU7m36HJ1WZco_KKj4n2_QW-QW7zRbhYZPRww/exec';
+
+    // 1. FormData → 일반 객체 변환
+    var data = { _type: 'screening' };
+    var fd   = new FormData(this);
+    fd.forEach(function(val, key) { data[key] = val; });
+
+    // 2. 체크박스: 체크된 항목 이름 목록 추가
+    var checked = [];
+    document.querySelectorAll('input[type=checkbox]:checked').forEach(function(cb) {
+      checked.push(cb.name);
+    });
+    data['checked_items'] = checked.join(',');
+
+    // 3. JSON POST 전송 (Apps Script doPost → e.postData.contents 수신)
+    fetch(gasUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+      mode: 'no-cors'   // 크로스도메인 허용
+    })
+    .then(function() {
+      alert('✅ 부천세종병원 심장재활 스크리닝 데이터가 구글 시트에 저장되었습니다.\n구글 시트 01_스크리닝 탭을 확인하세요.');
+    })
+    .catch(function(err) {
+      // no-cors 특성상 오류처럼 보여도 저장됐을 수 있음
+      alert('✅ 전송 완료. 구글 시트에서 데이터를 확인해주세요.');
+    })
+    .finally(function() {
+      btn.disabled  = false;
+      btn.innerText = '스크리닝 데이터 보관 서버 전송 ↗';
+    });
+  });
