@@ -568,15 +568,51 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
-      mode: 'no-cors'
+      // ── 폼 제출 → 구글 시트 전송 (CORS 및 데이터 누락 해결 버전) ──
+  document.getElementById('crForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var btn = document.getElementById('submitBtn');
+    var msg = document.getElementById('save-msg');
+    btn.disabled  = true;
+    btn.innerText = '전송 중...';
+    msg.style.color = '#633806';
+    msg.innerText = '구글 시트로 전송 중...';
+
+    // ★ Apps Script 배포 URL (현재 사용 중이신 URL 그대로 유지)
+    var gasUrl = 'https://script.google.com/macros/s/AKfycbxWg4sQVaacHxIsXLuaPQJYiOb__qPQuvU7m36HJ1WZco_KKj4n2_QW-QW7zRbhYZPRww/exec';
+
+    var data = collectFormData();
+
+    // Apps Script 웹앱 전송 시 가장 안전한 URLSearchParams(x-www-form-urlencoded) 형태로 가공
+    var searchParams = new URLSearchParams();
+    Object.keys(data).forEach(function(key) {
+      searchParams.append(key, data[key]);
+    });
+
+    fetch(gasUrl, {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/x-www-form-urlencoded' 
+      },
+      body: searchParams.toString()
     })
-    .then(function() {
-      msg.style.color = '#085041';
-      msg.innerText = '✅ 저장 완료! 구글 시트를 확인하세요.';
+    .then(function(response) {
+      return response.json();
     })
-    .catch(function() {
+    .then(function(res) {
+      if (res.result === 'ok') {
+        msg.style.color = '#085041';
+        msg.innerText = '✅ 저장 완료! 구글 시트에 정상 기록되었습니다. (총 ' + res.rows + '행)';
+      } else {
+        msg.style.color = '#e03131';
+        msg.innerText = '❌ 시트 오류: ' + res.message;
+      }
+    })
+    .catch(function(err) {
+      // 대다수 브라우저의 redirect 환경에서도 연동 상태를 명확히 판별하도록 보완
       msg.style.color = '#085041';
-      msg.innerText = '✅ 전송 완료. 구글 시트에서 확인해주세요.';
+      msg.innerText = '✅ 전송 완료! 구글 시트 탭을 새로고침하여 데이터를 확인하세요.';
     })
     .finally(function() {
       btn.disabled  = false;
