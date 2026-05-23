@@ -301,18 +301,32 @@
 
   <!-- 섹션 7 -->
   <div class="sec">
-    <div class="sh"><div class="snum n7">7</div><span class="stitle">유산소 운동 훈련 평가 및 처방</span><span class="ssa-ref">유산소-근력 처방 공식 분리</span></div>
+    <div class="sh"><div class="snum n7">7</div><span class="stitle">유산소 운동 훈련 평가</span><span class="ssa-ref">심폐운동능력 · 6분걷기 평가</span></div>
     <div class="sb">
-      <div class="fr">
-        <div><div class="fl">심폐운동부하검사(CPET) 결과</div><input class="fi" name="cpet_vo2" type="text" placeholder="예: peak VO2 24.5 ml/kg/min"></div>
-        <div><div class="fl">6분 보행검사(6MWT) 결과</div><div class="fwu"><input class="fi" name="6mwt_distance" type="text" placeholder="450"><span>m</span></div></div>
-      </div>
-      <div class="sl">유산소 FITT-VP 초기 설정</div>
+
+      <!-- CPET -->
+      <div class="sl">심폐운동능력검사 (CPET)</div>
       <div class="fr3">
-        <div><div class="fl">운동 빈도</div><input class="fi" name="ex_aerobic_f" type="text" placeholder="예: 주 3-5회"></div>
-        <div><div class="fl">처방 강도 (HRR/RPE)</div><input class="fi" name="ex_aerobic_i" type="text" placeholder="목표 HR 범위"></div>
-        <div><div class="fl">지속 시간</div><input class="fi" name="ex_aerobic_t" type="text" placeholder="예: 30~40분"></div>
+        <div><div class="fl">검사일</div><input class="fi" name="cpet_date" type="text" placeholder="YYYY-MM-DD"></div>
+        <div><div class="fl">VO₂max (ml/kg/min)</div><input class="fi" name="cpet_vo2max" type="text" placeholder="예: 24.5"></div>
+        <div><div class="fl">Predicted VO₂ (%)</div><input class="fi" name="cpet_vo2_pred_pct" type="text" placeholder="예: 78%"></div>
       </div>
+      <div class="fr">
+        <div><div class="fl">Peak RER</div><input class="fi" name="cpet_peak_rer" type="text" placeholder="예: 1.12"></div>
+        <div><div class="fl">Response Comments</div><input class="fi" name="cpet_comments" type="text" placeholder="예: Adequate effort, HR 정상 반응"></div>
+      </div>
+
+      <div class="div"></div>
+
+      <!-- 6MWT -->
+      <div class="sl">6분 걷기 검사 (6MWT)</div>
+      <div class="fr">
+        <div><div class="fl">걸은 거리 (m)</div>
+          <div class="fwu"><input class="fi" name="6mwt_distance" type="text" placeholder="예: 450"><span>m</span></div>
+        </div>
+        <div><div class="fl">Predicted 6MWT (%)</div><input class="fi" name="6mwt_pred_pct" type="text" placeholder="예: 82%"></div>
+      </div>
+
     </div>
   </div>
 
@@ -351,25 +365,48 @@
 
   <!-- 섹션 9 -->
   <div class="sec">
-    <div class="sh"><div class="snum n8">9</div><span class="stitle">근력 훈련 평가 및 처방</span><span class="ssa-ref">독립적 핵심요소 격상</span></div>
+    <div class="sh"><div class="snum n8">9</div><span class="stitle">근력 훈련 평가</span><span class="ssa-ref">근감소증 · Frailty · 기능 평가</span></div>
     <div class="sb">
-      <div class="alg"><i class="ti ti-info-circle"></i><p>근감소증 및 Frailty 조기 차단을 위한 저항 운동 가이드.</p></div>
+
+      <!-- TUG + 30초 의자 -->
+      <div class="sl">기능 평가</div>
       <div class="fr">
-        <div><div class="fl">Timed Up &amp; Go (TUG)</div><div class="fwu"><input class="fi" name="eval_tug" type="text" placeholder="예: 7.2"><span>초</span></div></div>
-        <div><div class="fl">30초 의자 일어서기</div><input class="fi" name="eval_chair_stand" type="text" placeholder="예: 15회"></div>
-      </div>
-      <div class="fr3">
-        <div><div class="fl">저항 빈도</div><input class="fi" name="ex_resistive_f" type="text" placeholder="예: 주 2회"></div>
-        <div><div class="fl">저항 강도 (RPE/%1RM)</div><input class="fi" name="ex_resistive_i" type="text" placeholder="RPE 11~13"></div>
-        <div><div class="fl">운동 형태</div>
-          <select class="fs" name="ex_resistive_type">
-            <option value="band">탄성 밴드</option>
-            <option value="machine">웨이트 머신</option>
-            <option value="bodyweight">체중 부하</option>
-            <option value="mixed">복합 하이브리드</option>
-          </select>
+        <div><div class="fl">Timed Up &amp; Go (TUG)</div>
+          <div class="fwu"><input class="fi" name="eval_tug" type="text" placeholder="예: 7.2"><span>sec</span></div>
+        </div>
+        <div><div class="fl">30초 의자 일어서기</div>
+          <div class="fwu"><input class="fi" name="eval_chair_stand" type="text" placeholder="예: 15"><span>rpm</span></div>
         </div>
       </div>
+
+      <div class="div"></div>
+
+      <!-- 근감소증 -->
+      <div class="sl">근감소증 (Sarcopenia) 분류</div>
+      <div class="fr1">
+        <select class="fs" name="sarcopenia_class">
+          <option value="none">해당 없음</option>
+          <option value="risk">근감소증 위험군</option>
+          <option value="possible">근감소증 가능성</option>
+          <option value="confirmed">근감소증</option>
+          <option value="obese1">비만성 근감소증 1단계</option>
+          <option value="obese2">비만성 근감소증 2단계</option>
+          <option value="functional">기능적 근감소증</option>
+        </select>
+      </div>
+
+      <div class="div"></div>
+
+      <!-- 허약 -->
+      <div class="sl">허약 (Frailty) 분류</div>
+      <div class="fr1">
+        <select class="fs" name="frailty_class">
+          <option value="none">해당 없음</option>
+          <option value="pre">허약 전단계 (Pre-frail)</option>
+          <option value="frail">허약 단계 (Frail)</option>
+        </select>
+      </div>
+
     </div>
   </div>
 
